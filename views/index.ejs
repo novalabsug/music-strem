@@ -1,0 +1,25 @@
+<%- include('imports/header'); -%> <%- include('imports/nav'); -%>
+<main id="landing-page">
+  <section class="sec-1">
+    <div class="header">
+      <h2 class="f-size-xxlrg">IVC Katale</h2>
+      <p>All your favourite music</p>
+      <p>
+        Stream, download, tap lyrics and browse for all your favorite music for
+        free
+      </p>
+    </div>
+  </section>
+  <section class="sec-2">
+    <h3 class="f-size-lrg">New Uploads</h3>
+    <div class="music-cards grd grd-cl-5"></div>
+  </section>
+  <section class="sec-3">
+    <div id="aplayer"></div>
+  </section>
+</main>
+<script src="/assets/jquery/dist/jquery.min.js"></script>
+<script src="/assets/jquery/dist/jquery.slim.js"></script>
+<script src="/js/index.js"></script>
+<script src="/js/aplayer.js"></script>
+<%- include('imports/footer-nav'); -%> <%- include('imports/footer'); -%>

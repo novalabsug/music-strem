@@ -1,0 +1,893 @@
+@font-face {
+  font-family: lato;
+  src: url(/fonts/Lato-Light.ttf);
+}
+
+@font-face {
+  font-family: karla;
+  src: url(../fonts/Karla/static/Karla-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: karla-bold;
+  src: url(../fonts/Karla/static/Karla-Bold.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1rem;
+  font-family: karla;
+  color: #fff;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+body.dark-bg {
+  background-color: #1a1a1a;
+  background-image: radial-gradient(at 0% 0%, #1a1a1a 0, transparent 30%), radial-gradient(at 50% 0%, #092738 0, transparent 50%), radial-gradient(at 100% 0%, #412c05 0, transparent 50%);
+  background-repeat: no-repeat;
+}
+
+body.light-bg {
+  background-color: #f5f4f4;
+}
+
+.audio-panel {
+  padding: 5% 3%;
+}
+
+#aplayer i,
+#aplayer p,
+#aplayer h3,
+#aplayer label,
+#aplayer h4,
+#aplayer span {
+  color: #000;
+}
+
+.seek-bar {
+  margin: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #cfcfcf;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100000px;
+  cursor: pointer;
+}
+
+.fill {
+  height: 10px;
+  background-color: #575656;
+  border-radius: 100000px;
+}
+
+.handle {
+  width: 10px;
+  height: 10px;
+  background-color: #575656;
+  border-radius: 10000px;
+  margin-left: -5px;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.handle:hover {
+  background-color: white;
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+
+.center-align {
+  text-align: center;
+}
+
+.flx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flx.jc-btn {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flx.js-evn {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.flx.js-arnd {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.grd {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.grd.grd-cl-2 {
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.grd.grd-cl-3 {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.grd.grd-cl-4 {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.grd.grd-cl-5 {
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.grd.grd-cl-6 {
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.grd.grd-cl-7 {
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+h1.f-size-reg,
+h2.f-size-reg,
+h3.f-size-reg,
+h4.f-size-reg,
+h5.f-size-reg {
+  font-size: 1.2rem;
+}
+
+h1.f-size-med,
+h2.f-size-med,
+h3.f-size-med,
+h4.f-size-med,
+h5.f-size-med {
+  font-size: 1.3rem;
+}
+
+h1.f-size-lrg,
+h2.f-size-lrg,
+h3.f-size-lrg,
+h4.f-size-lrg,
+h5.f-size-lrg {
+  font-size: 1.5rem;
+}
+
+h1.f-size-xlrg,
+h2.f-size-xlrg,
+h3.f-size-xlrg,
+h4.f-size-xlrg,
+h5.f-size-xlrg {
+  font-size: 2rem;
+}
+
+h1.f-size-xxlrg,
+h2.f-size-xxlrg,
+h3.f-size-xxlrg,
+h4.f-size-xxlrg,
+h5.f-size-xxlrg {
+  font-size: 2.5rem;
+}
+
+.btn {
+  padding: 0.5rem 1.2rem;
+  background-color: #eba611;
+  color: #fff;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.btn.btn-m {
+  padding: 0.7rem 1.5rem;
+}
+
+.btn:hover {
+  padding: 0.6rem 1.3rem;
+}
+
+nav.m-navbar {
+  padding: 2rem 5rem;
+}
+
+nav.m-navbar .m-logo {
+  padding: 0 1rem;
+}
+
+nav.m-navbar .m-logo .menu-btn {
+  cursor: pointer;
+}
+
+nav.m-navbar .m-logo .menu-btn .menu-item {
+  height: 0.3rem;
+  width: 2rem;
+  margin: 0.2rem;
+  border-radius: 0.3rem;
+  background: #fff;
+}
+
+nav.m-navbar .m-logo .menu-btn .menu-item:first-child {
+  width: 1.5rem;
+  margin: 0 0 0 0.6rem;
+}
+
+nav.m-navbar .m-search-form form .input {
+  position: relative;
+}
+
+nav.m-navbar .m-search-form form .input i {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 1.2rem;
+  color: #186b9b;
+}
+
+nav.m-navbar .m-search-form form .input input {
+  background-color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.6rem 2rem;
+  color: #000;
+}
+
+nav.m-navbar .m-side-nav .side-nav-icons {
+  padding: 0 2rem;
+}
+
+nav.m-navbar .m-side-nav .side-nav-icons a {
+  padding: 0.6rem;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+nav.m-navbar .m-side-nav .side-nav-icons a.user-icon {
+  margin: 0 0.5rem;
+  background: #f0f0f075;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50%;
+}
+
+nav.m-navbar .m-side-nav .side-nav-icons a i {
+  font-size: 1.3rem;
+}
+
+nav.m-navbar .m-side-nav .user-dropdown {
+  padding: 2rem 1rem 3rem 1rem;
+  background: #f0f0f075;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  position: absolute;
+  top: 6rem;
+  right: 8rem;
+  display: none;
+}
+
+nav.m-navbar .m-side-nav .user-dropdown.show {
+  display: block;
+}
+
+nav.m-navbar .m-side-nav .user-dropdown i#dropdown-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+nav.m-navbar .m-side-nav .user-dropdown .user-profile {
+  padding: 1rem 0;
+}
+
+nav.m-navbar .m-side-nav .user-dropdown .user-profile p {
+  margin: 0.5rem 0;
+}
+
+nav.m-navbar .m-side-nav .user-dropdown .user-profile a {
+  position: relative;
+  top: 1rem;
+}
+
+nav.dashboard-navbar {
+  width: 17%;
+  background: #050f1b;
+  height: 100%;
+  border-radius: 2rem;
+  padding: 2rem 1rem;
+  -webkit-box-shadow: 0 3px 10px #00000033;
+          box-shadow: 0 3px 10px #00000033;
+}
+
+nav.dashboard-navbar .profile {
+  padding: 2rem 1rem 1rem;
+  background: #071424;
+  border-radius: 2rem;
+}
+
+nav.dashboard-navbar .profile .profile-img a {
+  position: relative;
+  left: 25%;
+  padding: 2rem 1rem 1.7rem 1rem;
+  border-radius: 50%;
+  background: #eba611;
+}
+
+nav.dashboard-navbar .profile .profile-img a i {
+  font-size: 3rem;
+}
+
+nav.dashboard-navbar .profile .profile-name {
+  padding: 2rem 1rem;
+}
+
+nav.dashboard-navbar .profile .profile-name p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+nav.dashboard-navbar .profile a.btn {
+  position: relative;
+  left: 20%;
+}
+
+nav.dashboard-navbar ul.nav-links {
+  padding: 2rem 1rem 1rem;
+}
+
+nav.dashboard-navbar ul.nav-links li {
+  margin: 1rem 0;
+}
+
+nav.dashboard-navbar ul.nav-links li a i {
+  margin: 0 0.3rem;
+  font-size: 1.3rem;
+}
+
+nav.dashboard-navbar ul.nav-links li a:hover {
+  font-weight: bold;
+}
+
+nav.dashboard-navbar .footer-side-nav {
+  padding: 1rem 0;
+}
+
+main#landing-page section.sec-1 {
+  padding: 2rem 3rem;
+  width: 100%;
+}
+
+main#landing-page section.sec-1 .header {
+  padding: 2rem 3rem 8rem 3rem;
+  width: 70%;
+}
+
+main#landing-page section.sec-1 .header h2 {
+  letter-spacing: 0px;
+  margin: 0.5rem 0;
+  font-size: 3rem;
+  font-family: karla;
+  font-weight: 600;
+}
+
+main#landing-page section.sec-1 .header p {
+  font-size: 1.5rem;
+  margin: 0.3rem 0;
+}
+
+main#landing-page section.sec-2 {
+  padding: 2rem 5rem;
+}
+
+main#landing-page section.sec-2 .music-cards {
+  padding: 1rem 0;
+}
+
+main#landing-page section.sec-2 .music-cards .music-card:hover {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+main#landing-page section.sec-2 .music-cards .music-card img {
+  width: 100%;
+}
+
+main#landing-page section.sec-2 .music-cards .music-card .txt p {
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+}
+
+main#landing-page section.sec-3 {
+  padding: 0 5rem;
+}
+
+main#account {
+  padding: 3rem 3rem 1rem 3rem;
+}
+
+main#account .form .forms-wrapper {
+  padding: 3rem 5rem;
+}
+
+main#account .form .forms-wrapper .forms {
+  width: 90%;
+}
+
+main#account .form .forms-wrapper .forms .forms-header {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-header .btn-form {
+  padding: 1rem 2rem;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+main#account .form .forms-wrapper .forms .forms-header .btn-form.active {
+  border-bottom: 2px solid #cecece;
+}
+
+main#account .form .forms-wrapper .forms .forms-container {
+  padding: 2rem 1rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form {
+  display: none;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form.show {
+  display: block;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form h3 i {
+  font-size: 2rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .other-auth-option {
+  padding: 2rem 0 1rem 0;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .other-auth-option p {
+  font-size: 1.3rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .other-auth-option .google-auth {
+  padding: 1rem 2rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .other-auth-option .google-auth a {
+  padding: 0.5rem 1rem;
+  border: 2px solid #eba611;
+  border-radius: 5rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .other-auth-option .google-auth a i {
+  font-size: 1.3rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .other-auth-option .apple-auth {
+  padding: 1rem 2rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .other-auth-option .apple-auth a {
+  padding: 0.5rem 1rem;
+  border: 2px solid #186b9b;
+  border-radius: 5rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .other-auth-option .apple-auth a i {
+  font-size: 1.3rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .input {
+  padding: 0.5rem 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .input i {
+  position: absolute;
+  top: 3.4rem;
+  left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .input label {
+  padding: 0.5rem 0;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .input input {
+  background-color: #1f1f1f;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.6rem 2rem;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form .input p.error {
+  color: #ff002b;
+}
+
+main#account .form .forms-wrapper .forms .forms-container form button {
+  outline: none;
+  border: none;
+  margin: 2rem 0;
+}
+
+main#register {
+  padding: 3rem 5rem;
+}
+
+main#register .form {
+  width: 100%;
+  padding: 0 3rem;
+}
+
+main#register .form form.show {
+  display: block;
+}
+
+main#register .form form h3 i {
+  font-size: 2rem;
+}
+
+main#register .form form .other-signin-option {
+  padding: 2rem 0 1rem 0;
+}
+
+main#register .form form .input {
+  padding: 0.5rem 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+main#register .form form .input i {
+  position: absolute;
+  top: 3.4rem;
+  left: 1.5rem;
+  font-size: 1.2rem;
+}
+
+main#register .form form .input label {
+  padding: 0.5rem 0;
+}
+
+main#register .form form .input input {
+  background-color: #1f1f1f;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.6rem 2rem;
+}
+
+main#register .form form .input p.error {
+  color: #ff002b;
+}
+
+main#register .form form button {
+  outline: none;
+  border: none;
+  margin: 2rem 0;
+}
+
+main#page-not-found {
+  padding: 2rem 2rem 3rem 2rem;
+}
+
+main#page-not-found .bg-img h3.realign {
+  position: absolute;
+  top: 40%;
+  font-size: 8rem;
+  font-family: karla-bold;
+  text-transform: uppercase;
+  font-weight: bolder;
+  background-color: #242424;
+  background-image: radial-gradient(at 4% 36%, #092738 0, transparent 53%), radial-gradient(at 100% 60%, #412c05 0, transparent 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main#page-not-found .bg-img h3.realign.left-align {
+  left: 12rem;
+}
+
+main#page-not-found .bg-img h3.realign.right-align {
+  right: 15rem;
+}
+
+main#page-not-found .bg-img img {
+  width: 20%;
+  height: 20%;
+  position: relative;
+  left: 45%;
+}
+
+main#page-not-found .bg-img p {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+}
+
+main#page-not-found .bg-img p span.count-down {
+  font-size: 2rem;
+}
+
+main#dashboard {
+  padding: 1rem;
+}
+
+main#dashboard .content {
+  height: 100%;
+  width: 80%;
+  padding: 1rem;
+}
+
+main#dashboard .content section#sec-1 {
+  padding: 1rem 2rem 2rem 2rem;
+}
+
+main#dashboard .content section#sec-1 .top-nav a {
+  font-size: 1.3rem;
+  color: #000;
+  margin: 1rem 0;
+}
+
+main#dashboard .content section#sec-1 .top-nav h3 {
+  color: #000;
+  font-family: karla-bold;
+}
+
+main#dashboard .content section#sec-1 .top-nav h3 .text-secondary {
+  font-size: 2rem;
+  color: #eba611;
+  font-family: karla-bold;
+}
+
+main#dashboard .content section#sec-1 .top-nav form {
+  position: absolute;
+  top: 3rem;
+  right: 5rem;
+}
+
+main#dashboard .content section#sec-1 .top-nav form i {
+  color: #000;
+  position: absolute;
+  top: 0.6rem;
+  left: 0.3rem;
+  font-size: 1.1rem;
+}
+
+main#dashboard .content section#sec-1 .top-nav form input {
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 10px #00000033;
+          box-shadow: 0 3px 10px #00000033;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  border-radius: 0.3rem;
+  color: #000;
+}
+
+main#dashboard .content section#sec-1 form.add-music-form {
+  padding: 2rem 0;
+}
+
+main#dashboard .content section#sec-1 form.add-music-form h3 {
+  color: #000;
+  font-family: karla-bold;
+}
+
+main#dashboard .content section#sec-1 form.add-music-form .form-input {
+  padding: 1rem 0;
+}
+
+main#dashboard .content section#sec-1 form.add-music-form .form-input .input label {
+  color: #000;
+}
+
+main#dashboard .content section#sec-1 form.add-music-form .form-input .input button {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main#dashboard .content section#sec-1 form.add-music-form .form-input .input input {
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 10px #00000033;
+          box-shadow: 0 3px 10px #00000033;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  border-radius: 0.3rem;
+  margin: 0.3rem 0;
+  color: #000;
+}
+
+main#dashboard .content section#sec-2 {
+  padding: 2rem 1rem;
+}
+
+main#dashboard .content section#sec-2.error {
+  padding: 8rem 0;
+}
+
+main#dashboard .content section#sec-2.error p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #000;
+}
+
+main#dashboard .content section#sec-2.error a {
+  position: relative;
+  left: 45%;
+}
+
+main#dashboard .content section#sec-2 .cards {
+  padding: 1rem;
+}
+
+main#dashboard .content section#sec-2 .cards .card {
+  padding: 1rem;
+  height: 150px;
+  background: #fff;
+  border-radius: 1rem;
+}
+
+main#dashboard .content section#sec-2 .cards .card .agg-num {
+  height: 70%;
+  padding: 1rem 0 0 0;
+}
+
+main#dashboard .content section#sec-2 .cards .card .agg-num h3 {
+  color: #000;
+}
+
+main#dashboard .content section#sec-2 .cards .card p {
+  color: #000;
+}
+
+main#dashboard .content section#sec-2 .cards .card.bg-dif {
+  background: #050f1b;
+}
+
+main#dashboard .content section#sec-2 .cards .card.bg-dif .agg-num h3 {
+  color: #eba611;
+}
+
+main#dashboard .content section#sec-2 .cards .card.bg-dif p {
+  color: #fff;
+}
+
+footer {
+  background-color: #1a1a1a;
+}
+
+footer.footer-main-nav {
+  padding: 3rem 5rem;
+}
+
+footer.footer-main-nav .flx section.sec-1 {
+  padding: 3rem 3rem 5rem 3rem;
+}
+
+footer.footer-main-nav .flx section.sec-1 h2 {
+  text-align: center;
+}
+
+footer.footer-main-nav .flx section.sec-1 .social-icons {
+  padding: 0.5rem 0;
+}
+
+footer.footer-main-nav .flx section.sec-1 .social-icons a {
+  margin: 0 0.3rem;
+}
+
+footer.footer-main-nav .flx section.sec-1 .social-icons a i {
+  font-size: 1.3rem;
+}
+
+footer.footer-main-nav .flx section.sec-2 {
+  padding: 2rem 1rem;
+}
+
+footer.footer-main-nav .flx section.sec-2 .contact-container {
+  padding: 0 2rem;
+}
+
+footer.footer-main-nav .flx section.sec-2 .contact-container p {
+  margin: 0.5rem 0;
+}
+
+footer.footer-main-nav .flx section.sec-2 .contact-container p i {
+  font-size: 1.2rem;
+  margin: 0 0.3rem;
+}
+
+footer.footer-main-nav .flx section.sec-2 .navlinks-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2rem;
+}
+
+footer.footer-main-nav .flx section.sec-2 .navlinks-container a {
+  margin: 0.5rem 0;
+}
+
+footer.footer-main-nav .flx section.sec-2 .navlinks-container a:hover {
+  font-weight: bold;
+}
+
+footer.footer-main-nav .flx section.sec-3 {
+  padding: 2rem 1rem;
+}
+
+footer.footer-main-nav .flx section.sec-3 form {
+  padding: 1rem 0 2rem 0;
+}
+
+footer.footer-main-nav .flx section.sec-3 form input {
+  background-color: #1f1f1f;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.6rem 2rem;
+  width: 100%;
+}
+
+footer.footer-main-nav .flx section.sec-3 form button {
+  outline: none;
+  border: none;
+  margin: 1rem;
+}
+
+footer.footer-main-nav .footer-bottom {
+  padding: 1rem 0;
+}
+
+footer.footer-main-nav .footer-bottom p span {
+  color: #eba611;
+}
+/*# sourceMappingURL=main.css.map */

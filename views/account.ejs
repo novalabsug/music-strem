@@ -1,0 +1,82 @@
+<%- include('imports/header'); -%>
+    <%- include('imports/nav-2'); -%>
+        <main id="account">
+            <div class="form">
+                <!-- <h2 class="f-size-xlrg">Personal Account</h2> -->
+                <div class="forms-wrapper">
+                    <div class="forms">
+                        <div class="forms-header flx">
+                            <a class="btn-form signup-form-btn">Sign Up</a>
+                            <a class="btn-form signin-form-btn">Sign In</a>
+                        </div>
+                        <div class="forms-container">
+                            <form id="signup-form" class="">
+                                <h3 class="f-size-lrg">Create new Account</h3>
+                                <div class="input-grp grd grd-cl-2">
+                                    <div class="input flx">
+                                        <label for="firstname">Firstname</label>
+                                        <i class="lni lni-user"></i>
+                                        <input type="text" name="firstname" class="firstname" placeholder="eg. John">
+                                        <p class="error firstname-error"></p>
+                                    </div>
+                                    <div class="input flx">
+                                        <label for="lastname">Lastname</label>
+                                        <i class="lni lni-user"></i>
+                                        <input type="text" name="lastname" class="lastname" placeholder="eg. Doe">
+                                        <p class="error lastname-error"></p>
+                                    </div>
+                                </div>
+                                <div class="input-grp grd grd-cl-2">
+                                    <div class="input flx">
+                                        <label for="email">Email</label>
+                                        <i class="lni lni-envelope"></i>
+                                        <input type="email" name="email" class="email" placeholder="eg. example@email.com">
+                                        <p class="error email-error"></p>
+                                    </div>
+                                    <div class="input flx">
+                                        <label for="phone">Phone Number</label>
+                                        <i class="lni lni-phone"></i>
+                                        <input type="number" name="phone" class="phone" placeholder="eg. 2567*********">
+                                        <p class="error phone-error"></p>
+                                    </div>
+                                </div>
+                                <div class="input flx">
+                                    <label for="password">Password</label>
+                                    <i class="lni lni-lock"></i>
+                                    <input type="password" name="password" id="" class="password" placeholder="min - 6 characters && max - 10 characters">
+                                    <p class="error password-error"></p>
+                                </div>
+                                <!-- <div class="other-auth-option">
+                                    <p class="center-align">OR</p>
+                                    <div class="flx jc-btn">
+                                    </div>
+                                </div> -->
+                                <button type="submit" class="btn btn-m">Sign Up</button>
+                            </form>
+                            <form id="signin-form" class="">
+                                <h3 class="f-size-lrg">Login to your Account</h3>
+                                <div class="input flx">
+                                    <label for="email">Email</label>
+                                    <i class="lni lni-envelope"></i>
+                                    <input type="email" name="email" class="email" placeholder="eg. example@email.com">
+                                    <p class="error email-error"></p>
+                                </div>
+                                <div class="input flx">
+                                    <label for="password">Password</label>
+                                    <i class="lni lni-lock"></i>
+                                    <input type="password" name="password" id="" class="password" placeholder="min - 6 characters && max - 10 characters">
+                                    <p class="error password-error"></p>
+                                </div>
+                                <div class="other-auth-option">
+
+                                </div>
+                                <button type="submit" class="btn btn-m">Sign In</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include('imports/footer-nav-2'); -%>
+            <script src="/js/account.js"></script>
+            <%- include('imports/footer'); -%>
