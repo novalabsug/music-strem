@@ -23,7 +23,7 @@ app.use(morgan("dev"));
 const PORT = process.env.PORT || 3000;
 
 mongoose
-  .connect("mongodb://127.0.0.1:27017/music-stream", {
+  .connect("mongodb+srv://nova:novalabs@cluster0.tep0h.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
