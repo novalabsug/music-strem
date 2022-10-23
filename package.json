@@ -4,7 +4,7 @@
   "description": "music stream",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "novalabsug",
   "license": "MIT",
